@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Mobile Cover Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#111;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:17px;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+.banner{
+background:linear-gradient(135deg,#007bff,#00c6ff);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.banner h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.about{
+width:90%;
+max-width:1100px;
+margin:60px auto;
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.about img{
+width:450px;
+max-width:100%;
+border-radius:15px;
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.about-text p{
+font-size:17px;
+line-height:1.8;
+color:#555;
+margin-bottom:15px;
+}
+
+.features{
+background:white;
+padding:60px 8%;
+}
+
+.features h2{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+}
+
+.boxes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.box{
+background:#f8f8f8;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.box h3{
+margin:15px 0;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.banner h1{
+font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">MobileCover</div>
+
+<nav>
+
+<a href="homepage.html">Home</a>
+<a href="about.html">About</a>
+<a href="shop.html">Shop</a>
+<a href="category.html">Categories</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒 <span id="cart">0</span></a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>About Our Store</h1>
+
+<p>Your Trusted Mobile Cover Shopping Destination</p>
+
+</section>
+
+<section class="about">
+
+<img src="mb.jpg">
+
+<div class="about-text">
+
+<h2>Who We Are</h2>
+
+<p>
+Welcome to Mobile Cover Store. We provide premium quality mobile covers for iPhone, Samsung, Vivo, Oppo, Infinix, Tecno and many other brands.
+</p>
+
+<p>
+Our mission is to offer stylish, durable and affordable mobile covers with fast delivery and excellent customer support.
+</p>
+
+<p>
+Customer satisfaction is our top priority. Every product is carefully selected to ensure the best quality.
+</p>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Why Choose Us?</h2>
+
+<div class="boxes">
+
+<div class="box">
+<h3>✅ Premium Quality</h3>
+<p>High-quality mobile covers with excellent protection.</p>
+</div>
+
+<div class="box">
+<h3>🚚 Fast Delivery</h3>
+<p>Quick and reliable shipping across Pakistan.</p>
+</div>
+
+<div class="box">
+<h3>💳 Secure Payment</h3>
+<p>Safe and secure payment methods.</p>
+</div>
+
+<div class="box">
+<h3>📞 Customer Support</h3>
+<p>Friendly support whenever you need help.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mobile Cover Store | All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

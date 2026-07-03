@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#111;
+color:#fff;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:40px auto;
+}
+
+h1{
+margin-bottom:25px;
+}
+
+.cart-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#fff;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,.1);
+flex-wrap:wrap;
+}
+
+.cart-item img{
+width:120px;
+height:120px;
+border-radius:10px;
+object-fit:cover;
+}
+
+.product-info{
+flex:1;
+padding:0 20px;
+}
+
+.product-info h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#007bff;
+font-size:22px;
+font-weight:bold;
+}
+
+.quantity{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.quantity button{
+width:35px;
+height:35px;
+border:none;
+background:#007bff;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.quantity span{
+font-size:18px;
+font-weight:bold;
+}
+
+.remove{
+background:red;
+color:#fff;
+border:none;
+padding:10px 18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.summary{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 10px rgba(0,0,0,.1);
+margin-top:30px;
+}
+
+.summary h2{
+margin-bottom:15px;
+}
+
+.summary p{
+font-size:20px;
+margin:10px 0;
+}
+
+.checkout{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:#28a745;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+font-size:18px;
+}
+
+.checkout:hover{
+background:#218838;
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.cart-item{
+flex-direction:column;
+text-align:center;
+}
+
+.product-info{
+padding:20px 0;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">MobileCover</div>
+
+<nav>
+<a href="homepage.html">Home</a>
+<a href="about.html">About</a>
+<a href="shop.html">Shop</a>
+<a href="category.html">Categories</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart 🛒 <span id="cart">0</span></a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Shopping Cart</h1>
+
+<div class="cart-item">
+
+<img src="ip5.jpg">
+
+<div class="product-info">
+
+<h3>iPhone 15 Silicone Cover</h3>
+
+<p class="price">$15</p>
+
+</div>
+
+<div class="quantity">
+
+<button onclick="decrease()">-</button>
+
+<span id="qty">1</span>
+
+<button onclick="increase()">+</button>
+
+</div>
+
+<button class="remove">Remove</button>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<p>Total Items: <span id="items">1</span></p>
+
+<p>Total Price: $<span id="total">15</span></p>
+
+<a href="checkout.html" class="checkout">Proceed to Checkout</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Mobile Cover Store | All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+let qty=1;
+let price=15;
+
+function update(){
+
+document.getElementById("qty").innerHTML=qty;
+
+document.getElementById("items").innerHTML=qty;
+
+document.getElementById("total").innerHTML=qty*price;
+
+}
+
+function increase(){
+
+qty++;
+
+update();
+
+}
+
+function decrease(){
+
+if(qty>1){
+
+qty--;
+
+update();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
